@@ -2,9 +2,9 @@ name: CI/CD
 
 on:
   push:
-    branches: [stagin]
+    branches: [staging]
   pull_request:
-    branches: [stagin]
+    branches: [staging]
 
 jobs:
   build:
