@@ -1,0 +1,17 @@
+.pedido-item span{
+    font-family: 'Muli',sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.pedido-item label{
+    font-family: 'Muli',sans-serif;
+    font-size: 1.1rem;
+}
+.text-coffe{
+    color: #5B430A;
+}
+
+.bg-sweet{
+    background-color: #44D3C3;
+}

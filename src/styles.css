@@ -1,1 +1,12 @@
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
 /* You can add global styles to this file, and also import other style files */
+body{
+    height: 100vh;
+}
+
+.ng-sidebar {
+    background-color: #44D3C3;
+    padding: 10px;
+    width: 13rem;
+}
