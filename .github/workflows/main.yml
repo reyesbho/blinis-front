@@ -7,34 +7,26 @@ on:
     branches: [staging]
 
 jobs:
-  build:
+  run_tests: # Identificador del job
+    name: Run test # Nombre del job
+    runs-on: ubuntu-latest # Aquí elegimos el entorno donde se ejecutará. 
+    steps: # En este apartado se definen los pasos del job
+      - uses: actions/checkout@v1 # Obtenemos una copia de la rama en la que se ejecuta este job
+      - name: Install dependency # Nombre del paso
+        run: npm install # Comandos que se van a ejecutar en este paso
+      - name: Run test
+        run: npm test
+
+  build_and_deploy:
+    name: Build my app and deploy
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [14.16.1]
-
+    needs: [run_tests]
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-
-      - name: Set up Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
-        with:
-          node-version: ${{ matrix.node-version }}
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Build
-        run: npm run build
-
       - uses: actions/checkout@v1
       - uses: akhileshns/heroku-deploy@v3.5.6
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_app_name: "blinis"
-          heroku_email: "reyesbho@gmail.com"
-
+          heroku_app_name: "blinis-web"
+          heroku_email: reyesbho@gmail.com
       - name: Run a one-line script
         run: echo successfully run
