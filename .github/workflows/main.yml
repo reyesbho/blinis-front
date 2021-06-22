@@ -1,32 +1,22 @@
-name: CI/CD
-
+name: Deploy my Angular App
 on:
   push:
-    branches: [staging]
-  pull_request:
-    branches: [staging]
-
+    branches:
+      - master
 jobs:
-  run_tests: # Identificador del job
-    name: Run test # Nombre del job
-    runs-on: ubuntu-latest # Aquí elegimos el entorno donde se ejecutará. 
-    steps: # En este apartado se definen los pasos del job
-      - uses: actions/checkout@v1 # Obtenemos una copia de la rama en la que se ejecuta este job
-      - name: Install dependency # Nombre del paso
-        run: npm install # Comandos que se van a ejecutar en este paso
-      - name: Run test
-        run: npm test
-
-  build_and_deploy:
-    name: Build my app and deploy
+  build:
+    name: Build
     runs-on: ubuntu-latest
-    needs: [run_tests]
     steps:
       - uses: actions/checkout@v1
+      - name: Build angular app
+        run: |
+          echo "Install dependency"
+          npm install
+      - name: Deploy
+        run: echo "Deploy to heroku"
       - uses: akhileshns/heroku-deploy@v3.5.6
         with:
-          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_api_key: ${{secrets.HEROKU_API_TOKEN}}
           heroku_app_name: "blinis-web"
-          heroku_email: reyesbho@gmail.com
-      - name: Run a one-line script
-        run: echo successfully run
+          heroku_email: "reyesbho@gmail.com"
