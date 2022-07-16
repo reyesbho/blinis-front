@@ -7,9 +7,6 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { PedidosComponent } from './components/pedidos/pedidos.component';
 import { LoginComponent } from './components/login/login.component';
-import {InputTextModule} from 'primeng/inputtext';
-import {RippleModule} from 'primeng/ripple';
-import {ButtonModule} from 'primeng/button';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { SidebarModule } from 'ng-sidebar';
 import { PedidoItemComponent } from './components/pedido-item/pedido-item.component';
@@ -33,9 +30,6 @@ import { ProductoItemComponent } from './components/producto-item/producto-item.
   imports: [
     BrowserModule,
     AppRoutingModule,
-    InputTextModule,
-    RippleModule,
-    ButtonModule,
     SidebarModule.forRoot(),
     BrowserAnimationsModule
   ],
