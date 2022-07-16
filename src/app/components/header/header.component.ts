@@ -8,21 +8,23 @@ import { SidebarService } from 'src/app/services/sidebar.service';
 })
 export class HeaderComponent implements OnInit {
 
-  
-  _opened: boolean = true;
-  constructor(private sidebarService:SidebarService) {
-    this.sidebarService._isOpened().subscribe(
-      open => this._opened = open
-    );
-   }
 
-  ngOnInit(): void {
-    
+  opened: any;
+  constructor(private sidebarService: SidebarService) {
+
   }
 
+  ngOnInit(): void {
+    this.listenerTogleSidebar();
+  }
 
+  listenerTogleSidebar() {
+    this.sidebarService.getTogleSidebar().subscribe(
+      (open: boolean) => this.opened = open
+    );
+  }
 
-  _toggleSidebar(){
+  _toggleSidebar() {
     this.sidebarService._toggleSidebar();
   }
 }

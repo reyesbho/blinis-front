@@ -26,10 +26,17 @@
 }
 
 .sidebar_items li{
-    
+
     font-family: 'Kaushan Script', cursive;
     padding-top: 10px;
 }
+
+.sidebar_items a{
+  text-decoration: none;
+  font-size: 1.4rem;
+  color: white;
+}
+
 
 .sidebar_items a:hover{
     text-decoration: underline;

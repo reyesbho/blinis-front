@@ -1,3 +1,11 @@
+.pedido-item {
+  cursor: pointer;
+}
+
+.pedido-item:hover {
+  background-color: #e3f3f1;
+}
+
 .pedido-item span{
     font-family: 'Muli',sans-serif;
     font-size: 1.2rem;

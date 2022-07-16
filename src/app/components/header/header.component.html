@@ -1,20 +1,17 @@
 <nav class="navbar navbar-expand-lg bg-custom shadow  mb-2">
-    <div class="container-fluid d-flex justify-content-md-betweenm-0 p-0">
-        <div>
-            <i *ngIf="_opened" class="bi bi-x-square-fill" style="font-size: 2.5rem; color: #44D3C3;"
-                (click)="_toggleSidebar()"></i>
-            <i *ngIf="!_opened" class="bi bi-arrow-right-square-fill" style="font-size: 2.5rem; color: #44D3C3; "
-                (click)="_toggleSidebar()"></i>
-        </div>
-        <h1>Dulces momentos</h1>
-        <div class="d-flex align-content-center justify-content-center align-items-center">
-            <div>
-                <i class="bi bi-bell-fill" style="font-size: 1.5rem;"></i>
-            </div>
-            <div>
-                <i class="bi bi-person-circle" style="font-size: 3rem;"></i>
-            </div>
-        </div>
+  <div class="container-fluid d-flex justify-content-between m-0 p-0">
+    <div>
+      <i *ngIf="opened" class="bi bi-x-square-fill arrow" (click)="_toggleSidebar()"></i>
+      <i *ngIf="!opened" class="bi bi-arrow-right-square-fill arrow" (click)="_toggleSidebar()"></i>
     </div>
-
+    <h1>Dulces momentos</h1>
+    <div class="d-flex align-items-center justify-content-between user-info">
+      <div>
+        <i class="bi bi-bell-fill user-notification"></i>
+      </div>
+      <div>
+        <i class="bi bi-person-circle icon-user"></i>
+      </div>
+    </div>
+  </div>
 </nav>

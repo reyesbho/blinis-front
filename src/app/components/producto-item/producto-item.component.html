@@ -1,0 +1,42 @@
+<div class="container-fluid producto-item m-0 p-2 border mt-2 shadow-sm rounded-3">
+  <div class="row ">
+    <div class="col-md-6 col-sm-6">
+      <div class="row">
+          <img src="./../../../assets/images/pizza.png" />
+
+        <div class="col-md-6">
+          <label>{{producto.tipo}}</label>
+          <div>
+            <span>Especialidad: </span>
+            <label>{{producto.especialidad}}</label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 col-sm-6 ">
+      <div class="row">
+        <div class="col-md-6">
+          <label>Ingredientes:</label>
+          <div>
+            <ul>
+              <ng-container *ngFor="let ingrediente of producto.ingredientes">
+                <li>{{ingrediente}}</li>
+              </ng-container>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="d-flex">
+            <span>Tamaño:</span><br>
+            <label>{{producto.size}}</label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="d-flex justify-content-end ">
+  <button class="btn btn-sm btn-danger">
+    <i class="bi bi-trash"></i>
+  </button>
+</div>
+</div>

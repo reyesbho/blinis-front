@@ -1,0 +1,9 @@
+.producto-item{
+  font-size: 1.3rem;
+}
+.producto-item img{
+  width: auto;
+  height: auto;
+  max-height: 100px;
+}
+

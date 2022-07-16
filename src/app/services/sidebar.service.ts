@@ -6,21 +6,19 @@ import { Observable, Subject } from 'rxjs';
 })
 export class SidebarService {
 
-  _opened: boolean = true;
+  _opened: boolean = false;
 
   subject = new Subject<boolean>();
 
 
   constructor() { }
 
-
-  
   _toggleSidebar() {
     this._opened = !this._opened;
     this.subject.next(this._opened);
   }
 
-  _isOpened(): Observable<boolean> {
+  getTogleSidebar(): Observable<boolean> {
     return this.subject.asObservable();
   }
 

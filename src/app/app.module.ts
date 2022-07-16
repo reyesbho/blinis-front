@@ -13,6 +13,8 @@ import {ButtonModule} from 'primeng/button';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { SidebarModule } from 'ng-sidebar';
 import { PedidoItemComponent } from './components/pedido-item/pedido-item.component';
+import { PedidoDetailComponent } from './components/pedido-detail/pedido-detail.component';
+import { ProductoItemComponent } from './components/producto-item/producto-item.component';
 
 
 
@@ -24,7 +26,9 @@ import { PedidoItemComponent } from './components/pedido-item/pedido-item.compon
     PedidosComponent,
     LoginComponent,
     SidebarComponent,
-    PedidoItemComponent
+    PedidoItemComponent,
+    PedidoDetailComponent,
+    ProductoItemComponent
   ],
   imports: [
     BrowserModule,

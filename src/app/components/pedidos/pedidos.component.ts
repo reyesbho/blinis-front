@@ -13,11 +13,11 @@ export class PedidosComponent implements OnInit {
   ];
   constructor() {
     this.pedidos = [
-      { cliente: "Reyes Bustamante", fechaEntrega: new Date(), productos: 5, total: 500, adeudo: 200, estatus: "Por hacer" },
-      { cliente: "Jorge Perez", fechaEntrega: new Date(), productos: 5, total: 500, adeudo: 200, estatus: "Por hacer" },
-      { cliente: "Gato Hernandez", fechaEntrega: new Date(), productos: 5, total: 500, adeudo: 200, estatus: "Por hacer" },
-      { cliente: "Mauel Garcia", fechaEntrega: new Date(), productos: 5, total: 500, adeudo: 200, estatus: "Por hacer" },
-      { cliente: "Horacio Maldonado", fechaEntrega: new Date(), productos: 5, total: 500, adeudo: 200, estatus: "Por hacer" },
+      {idPedido:1, cliente: "Reyes Bustamante", fechaEntrega: new Date(), productos: [], total: 500, adeudo: 200, estatus: "Por hacer" },
+      {idPedido:2, cliente: "Jorge Perez", fechaEntrega: new Date(), productos: [], total: 500, adeudo: 200, estatus: "Por hacer" },
+      {idPedido:3, cliente: "Gato Hernandez", fechaEntrega: new Date(), productos: [], total: 500, adeudo: 200, estatus: "Por hacer" },
+      {idPedido:4, cliente: "Mauel Garcia", fechaEntrega: new Date(), productos: [], total: 500, adeudo: 200, estatus: "Por hacer" },
+      {idPedido:5, cliente: "Horacio Maldonado", fechaEntrega: new Date(), productos: [], total: 500, adeudo: 200, estatus: "Por hacer" },
     ];
   }
 

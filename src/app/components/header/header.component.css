@@ -1,9 +1,26 @@
 .navbar{
     background-color: #5B430A;
     color: white;
+    padding-right: 5px;
 }
 
 .navbar h1{
-    
+
     font-family: 'Kaushan Script', cursive;
+}
+
+.arrow{
+  font-size: 2.5rem; color: #44D3C3;
+}
+
+.user-info{
+  width: 100px;
+}
+
+.user-notification{
+  font-size: 1.5rem;
+}
+
+.icon-user{
+  font-size: 3rem;
 }
