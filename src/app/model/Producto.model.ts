@@ -1,11 +1,9 @@
 export class Producto {
   tipo!: string;
-  especialidad!: string;
   size!: string;
   precio!: number;
-  descripcion!: string;
+  nombre!: string;
   ingredientes!: string[];
-  icon!: string;
-
-
+  icon!:string;
+  clasificacion! : string;
 }

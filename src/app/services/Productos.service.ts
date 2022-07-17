@@ -1,4 +1,7 @@
 import { Injectable } from "@angular/core";
+import { Firestore } from "@angular/fire/firestore";
+import { collection } from "firebase/firestore";
+import {AngularFirestore} from "@angular/fire/compat/firestore";
 
 
 
@@ -8,14 +11,11 @@ import { Injectable } from "@angular/core";
 
 export class ProductoService {
 
-  constructor(){
+  constructor(private angularFire: AngularFirestore){
   }
 
-  /*async function getCities(db) {
-    const citiesCol = collection(db, 'cities');
-    const citySnapshot = await getDocs(citiesCol);
-    const cityList = citySnapshot.docs.map(doc => doc.data());
-    return cityList;
-  } */
+  getProducts() {
+      return this.angularFire.collection("productos").snapshotChanges();
+  }
 
 }

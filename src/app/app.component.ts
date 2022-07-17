@@ -1,9 +1,6 @@
 import { APP_ID, Component, InjectionToken, OnInit } from '@angular/core';
 
 import { SidebarService } from './services/sidebar.service';
-import { initializeApp } from "firebase/app";
-import { API_KEY, AUTH_DOMAIN, DATABASE_URL, MESSAGIN_SENDER_ID, PROJECT_ID, STORAGE_BUCKET } from './config/constants';
-import { getFirestore } from 'firebase/firestore/lite';
 
 @Component({
   selector: 'app-root',

@@ -9,7 +9,7 @@ import { Producto } from 'src/app/model/Producto.model';
 })
 export class ProductoItemComponent implements OnInit {
 
-  producto: Producto = { tipo: 'Pizza', descripcion: 'Peperoni peperoni', especialidad: 'Peperoni', size: 'Grande', precio: 200,
+  producto: Producto = { clasificacion: 'Pizza', nombre: 'Peperoni ', tipo: 'Peperoni', size: 'Grande', precio: 200,
   ingredientes: ['Peperoni', 'Cebolla'], icon: './../assets/pizza.png'};
 
   constructor() { }

@@ -11,11 +11,11 @@ export class PedidoDetailComponent implements OnInit {
 
   productos: Producto[] = [
     {
-      tipo: 'pizza', descripcion: 'Peperoni peperoni', especialidad: 'Peperoni', size: 'Grande', precio: 200,
+      clasificacion: 'pizza', nombre: 'Peperoni peperoni', tipo: 'Peperoni', size: 'Grande', precio: 200,
       ingredientes: ['Peperoni', 'Cebolla'], icon: './../assets/pizza.png'
     },
     {
-      tipo: 'pizza', descripcion: 'Peperoni peperoni', especialidad: 'Peperoni', size: 'Grande', precio: 200,
+      clasificacion: 'pizza', nombre: 'Peperoni peperoni', tipo: 'Peperoni', size: 'Grande', precio: 200,
       ingredientes: ['Peperoni', 'Cebolla'], icon: './../assets/pizza.png'
     }
   ];

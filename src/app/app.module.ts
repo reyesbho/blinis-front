@@ -12,6 +12,11 @@ import { SidebarModule } from 'ng-sidebar';
 import { PedidoItemComponent } from './components/pedido-item/pedido-item.component';
 import { PedidoDetailComponent } from './components/pedido-detail/pedido-detail.component';
 import { ProductoItemComponent } from './components/producto-item/producto-item.component';
+import { AngularFireModule } from '@angular/fire/compat';
+import { environment } from 'src/environments/environment';
+import { ProductosComponent } from './components/productos/productos.component';
+import { ProductoComponent } from './components/producto/producto.component';
+
 
 
 
@@ -25,13 +30,16 @@ import { ProductoItemComponent } from './components/producto-item/producto-item.
     SidebarComponent,
     PedidoItemComponent,
     PedidoDetailComponent,
-    ProductoItemComponent
+    ProductoItemComponent,
+    ProductosComponent,
+    ProductoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     SidebarModule.forRoot(),
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig)
   ],
   providers: [],
   bootstrap: [AppComponent]
